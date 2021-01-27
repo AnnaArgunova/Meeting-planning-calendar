@@ -1,7 +1,56 @@
 $font-size: 1rem;
-$font-color: green;
+$font-color: rgb(38, 41, 38);
+$background-color: rgba(199, 199, 199, 0.26);
+
+
+%style-button {
+    font-size: 1.2*$font-size;
+    border: 1px solid $font-color;
+    border-radius: 5px;
+    height: 30px;
+    background-color: $background-color;
+}
+
 
 html {
     font-size: $font-size;
     color: $font-color;
+}
+
+body {
+    width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+
+    select {
+        @extend %style-button;
+        margin: auto 3rem auto auto;
+    }
+
+    .button {
+        @extend %style-button;
+        margin-top: auto;
+        margin-bottom: auto;
+
+    }
+}
+
+table{
+    font-size: 1.5 *$font-size;
+    text-align: center;
+    table-layout: fixed;
+    width:100%;
+    background-color: $background-color;
+    tr:nth-child(even) {
+        background-color: $background-color;
+    }
+
+       tr{
+        height: 50px;
+        
+    }
 }
